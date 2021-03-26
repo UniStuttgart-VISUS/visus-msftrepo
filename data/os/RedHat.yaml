@@ -8,4 +8,3 @@ lookup_options:
 msftrepo::repos:
   microsoft-prod:
     repo_src: 'https://packages.microsoft.com/config/rhel/%{::os.release.major}/prod.repo'
-    repo_ext: 'repo'

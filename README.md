@@ -35,7 +35,7 @@ If desired, details of the installed repositories should be changed via Hiera.
 The following global Hiera settings affect all repositories:
 | Name                   | Description                                                              | Default          |
 | ---------------------- | ------------------------------------------------------------------------ | ---------------- |
-| `msftrepo::repo_dir`   | The path where the repository files are installed.                       |                  |
+| `msftrepo::repo_dir`   | The path where the repository files are installed.                       | undef            |
 | `msftrepo::repo_owner` | The user name or UID of the user owning the repository file.             | 0                |
 | `msftrepo::repo_group` | The name or UID of the group owning the repository file.                 | 0                |
 | `msftrepo::key_dir`    | The directory where the key should be installed on RedHat-based systems. | /etc/pki/rpm-gpg |

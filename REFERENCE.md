@@ -47,6 +47,8 @@ The directory where to install the repository file, ie
 "/etc/yum.repos.d" for RedHat-based systems. If not present,
 the module derives the path by itself.
 
+Default value: ``undef``
+
 ##### <a name="repo_owner"></a>`repo_owner`
 
 Data type: `Variant[String, Integer]`
@@ -116,7 +118,6 @@ The following parameters are available in the `msftrepo::repo` defined type:
 * [`key_dir`](#key_dir)
 * [`key_prefix`](#key_prefix)
 * [`ensure`](#ensure)
-* [`repo_ext`](#repo_ext)
 
 ##### <a name="repo_src"></a>`repo_src`
 
@@ -179,10 +180,4 @@ Determines whether the repository should be present or absent.
 This defaults to "present".
 
 Default value: `present`
-
-##### <a name="repo_ext"></a>`repo_ext`
-
-Data type: `String`
-
-
 

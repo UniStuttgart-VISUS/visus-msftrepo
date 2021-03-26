@@ -27,7 +27,7 @@
 #
 # @author Christoph Müller
 class msftrepo(
-        Optional[String] $repo_dir,
+        Optional[String] $repo_dir = undef,
         Variant[String, Integer] $repo_owner = 0,
         Variant[String, Integer] $repo_group = 0,
         String $key_dir = '/etc/pki/rpm-gpg',
@@ -51,7 +51,7 @@ class msftrepo(
     }
 
     $repos.each | $repo, $attributes | {
-        visusmsft::repo { $repo:
+        msftrepo::repo { $repo:
             repo_dir => $actual_repo_dir,
             repo_owner => $repo_owner,
             repo_group => $repo_group,

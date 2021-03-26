@@ -23,7 +23,6 @@
 define msftrepo::repo(
         String $repo_src,
         String $repo_dir,
-        String $repo_ext,
         Variant[String, Integer] $repo_owner,
         Variant[String, Integer] $repo_group,
         String $key_id,
@@ -34,7 +33,7 @@ define msftrepo::repo(
         ) {
 
     # Determine the extension of the repository file from the source's name.
-    $repo_ext = if $attributes[repo_src] =~ /(\.[^\.]+)$/ {
+    $repo_ext = if $repo_src =~ /(\.[^\.]+)$/ {
         "$0"
     } else {
         ''
@@ -58,7 +57,7 @@ define msftrepo::repo(
             }
 
             # (Un-) Install the repo definition.
-            file { "${dst}/${title}.${repo_ext}":
+            file { "${dst}/${title}${repo_ext}":
                 ensure => $ensure,
                 source => $repo_src,
                 owner => $repo_owner,
@@ -82,7 +81,7 @@ define msftrepo::repo(
             }
 
             # (Un-) Install the repo definition.
-            file { "${dst}/${title}.${repo_ext}":
+            file { "${dst}/${title}${repo_ext}":
                 ensure => $ensure,
                 source => $repo_src,
                 owner => $repo_owner,
