@@ -11,7 +11,6 @@ installation of Powershell and .NET Core via a package manager.
     * [Setup requirements](#setup-requirements)
     * [Beginning with msftrepo](#beginning-with-msftrepo)
 1. [Usage - Configuration options and additional functionality](#usage)
-1. [Limitations - OS compatibility, etc.](#limitations)
 1. [Development - Guide for contributing to the module](#development)
 
 ## Description
