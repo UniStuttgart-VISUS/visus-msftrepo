@@ -1,0 +1,10 @@
+---
+lookup_options:
+  msftrepo::repos:
+    merge:
+      strategy: deep
+      merge_hash_arrays: true
+
+msftrepo::repos:
+  microsoft-prod:
+    repo_src: 'https://packages.microsoft.com/config/%{::os.name}/%{::os.release.major}/prod.repo'

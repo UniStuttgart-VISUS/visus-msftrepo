@@ -1,10 +1,7 @@
 # msftrepo
 
-Welcome to your new module. A short overview of the generated parts can be found
-in the [PDK documentation][1].
-
-The README template below provides a starting point with details about what
-information to include in your README.
+The msftrepo module installs Microsoft repository sources that in turn enable
+installation of Powershell and .NET Core via a package manager.
 
 ## Table of Contents
 

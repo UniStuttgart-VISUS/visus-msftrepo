@@ -1,0 +1,11 @@
+---
+lookup_options:
+  msftrepo::repos:
+    merge:
+      strategy: deep
+      merge_hash_arrays: true
+
+msftrepo::repos:
+  microsoft-prod:
+    repo_src: 'https://packages.microsoft.com/config/rhel/%{::os.release.major}/prod.repo'
+    repo_ext: 'repo'

@@ -1,54 +1,52 @@
 {
-  "name": "visus-msftrepo",
-  "version": "0.1.0",
-  "author": "Christoph Müller",
-  "summary": "",
-  "license": "MIT",
-  "source": "",
-  "dependencies": [
-
-  ],
-  "operatingsystem_support": [
-    {
-      "operatingsystem": "CentOS",
+    "name": "visus-msftrepo",
+    "version": "0.1.0",
+    "author": "Christoph Müller",
+    "summary": "Installs Microsoft repository sources for Powershell etc. via Puppet.",
+    "license": "MIT",
+    "source": "https://github.com/UniStuttgart-VISUS/visus-msftrepo",
+    "dependencies": [],
+    "operatingsystem_support": [
+      {
+        "operatingsystem": "CentOS",
       "operatingsystemrelease": [
-        "7"
+        "6", "7", "8"
       ]
     },
     {
       "operatingsystem": "OracleLinux",
       "operatingsystemrelease": [
-        "7"
+        "6", "7", "8"
       ]
     },
     {
       "operatingsystem": "RedHat",
       "operatingsystemrelease": [
-        "8"
+        "6", "7", "8"
       ]
     },
     {
       "operatingsystem": "Scientific",
       "operatingsystemrelease": [
-        "7"
+        "6", "7"
       ]
     },
     {
       "operatingsystem": "Debian",
       "operatingsystemrelease": [
-        "10"
+        "8", "9", "10"
       ]
     },
     {
       "operatingsystem": "Ubuntu",
       "operatingsystemrelease": [
-        "18.04"
+        "18.04", "18.10", "19.04", "19.10", "20.04", "20.10"
       ]
     },
     {
       "operatingsystem": "Fedora",
       "operatingsystemrelease": [
-        "29"
+        "26", "27", "28", "29", "30", "31", "32", "33"
       ]
     }
   ],
@@ -56,6 +54,14 @@
     {
       "name": "puppet",
       "version_requirement": ">= 6.21.0 < 8.0.0"
+    },
+    {
+      "name": "puppet-yum",
+      "version_requirement": ">= 4.3.0 < 5.0.0"
+    },
+    {
+      "name": "puppetlabs-apt",
+      "version_requirement": ">= 7.7.1 < 8.0.0"
     }
   ],
   "pdk-version": "2.0.0",

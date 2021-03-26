@@ -1,1 +1,6 @@
---- {}
+---
+msftrepo::repos:
+  microsoft-prod:
+    key_src: 'https://packages.microsoft.com/keys/microsoft.asc'
+    key_id: '0xEB3E94ADBE1229CF'
+
