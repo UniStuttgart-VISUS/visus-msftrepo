@@ -15,6 +15,10 @@
 # @param key_prefix An additional prefix string that is added before the name of
 #                   the key file. This is only used on RedHat-based systems and
 #                   defaults to "RPM-GPG-KEY-".
+# @param repos The repositories that are being installed. The keys are the names
+#              used for the individual repository files, which must be unique.
+#              The values are a hash holding the parameters passed the defined
+#              type "repo". This parameter is filled from Hiera.
 #
 # @example Include all known repositories with default configurations.
 #    include visusmsft
@@ -30,7 +34,8 @@ class msftrepo(
         ) {
 
     # Resolve the actual repository directory in case the user did not specify
-    # and override path.
+    # an override path. For YUM, use the known path in etc, for APT, use the
+    # default path from the apt module, which this module depends on.
     $actual_repo_dir = if $repo_dir {
         $repo_dir
     } else {
@@ -46,7 +51,10 @@ class msftrepo(
     $repos.each | $repo, $attributes | {
         visusmsft::repo { $repo:
             repo_dir => $actual_repo_dir,
+            repo_owner => $repo_owner,
+            repo_group => $repo_group,
             key_dir => $key_dir,
+            key_prefix => $key_prefix,
             * => $attributes
         }
     }

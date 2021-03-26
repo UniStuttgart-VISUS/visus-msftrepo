@@ -25,7 +25,12 @@ This module requires `puppet-yum` and `puppetlabs-apt` being installed.
 
 ### Beginning with msftrepo
 
-Just add `include msftrepo` to configure the repository. If desired, you can configure details of the installed repositories via Hiera.
+Just add `include msftrepo` to add all configured repositories at their default
+location.
+
+## Usage
+
+If desired, details of the installed repositories should be changed via Hiera.
 
 The following global Hiera settings affect all repositories:
 | Name                   | Description                                                              | Default          |
@@ -43,14 +48,6 @@ The repositories are stored in the hash `msftrepo::repos`. Each of the repositor
 | `repo_src` | The URL where the repository definition is downloaded from. | OS-dependent                                      |
 | `key_id`   | The ID of the GPG key used with the repository.             | 0xEB3E94ADBE1229CF                                |
 | `key_src`  | The URL where the GPG key is downloaded from.             | https://packages.microsoft.com/keys/microsoft.asc   |
-
-## Usage
-
-Include usage examples for common use cases in the **Usage** section. Show your
-users how to use your module to solve problems, and be sure to include code
-examples. Include three to five examples of the most important or common tasks a
-user can accomplish with your module. Show users how to accomplish more complex
-tasks that involve different types, classes, and functions working in tandem.
 
 ## Development
 
