@@ -6,7 +6,7 @@
 
 ### Classes
 
-* [`msftrepo`](#msftrepo)
+* [`msftrepo`](#msftrepo): Installs the Microsoft package repositories.
 
 ### Defined types
 
@@ -16,7 +16,9 @@
 
 ### <a name="msftrepo"></a>`msftrepo`
 
-The msftrepo class.
+This module installs public Microsoft package repositories containing packages
+like Powershell and .NET Core. At the moment, this module only installs the
+Microsoft production repository.
 
 #### Examples
 
@@ -87,7 +89,10 @@ Default value: `'RPM-GPG-KEY-'`
 
 Data type: `Hash[String, Hash[String, Variant[String, Integer, Boolean]]]`
 
-
+The repositories that are being installed. The keys are the names
+used for the individual repository files, which must be unique.
+The values are a hash holding the parameters passed the defined
+type "repo". This parameter is filled from Hiera.
 
 Default value: `{}`
 

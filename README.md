@@ -6,11 +6,12 @@ installation of Powershell and .NET Core via a package manager.
 ## Table of Contents
 
 1. [Description](#description)
-1. [Setup - The basics of getting started with msftrepo](#setup)
+1. [Setup – The basics of getting started with msftrepo](#setup)
     * [What msftrepo affects](#what-msftrepo-affects)
     * [Setup requirements](#setup-requirements)
     * [Beginning with msftrepo](#beginning-with-msftrepo)
-1. [Usage - Configuration options and additional functionality](#usage)
+1. [Usage – Configuration options and additional functionality](#usage)
+1. [Limitations](#limitations)
 1. [Development - Guide for contributing to the module](#development)
 
 ## Description
@@ -48,6 +49,10 @@ The repositories are stored in the hash `msftrepo::repos`. Each of the repositor
 | `repo_src` | The URL where the repository definition is downloaded from. | OS-dependent                                      |
 | `key_id`   | The ID of the GPG key used with the repository.             | 0xEB3E94ADBE1229CF                                |
 | `key_src`  | The URL where the GPG key is downloaded from.             | https://packages.microsoft.com/keys/microsoft.asc   |
+
+## Limitations
+
+Only the distributions listed in `metadata.json` are supported.
 
 ## Development
 

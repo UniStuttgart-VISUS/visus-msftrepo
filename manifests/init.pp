@@ -1,7 +1,9 @@
 # @summary Installs the Microsoft package repositories.
 #
-# At the moment, this module only installs the Microsoft production repository.
-
+# This module installs public Microsoft package repositories containing packages
+# like Powershell and .NET Core. At the moment, this module only installs the
+# Microsoft production repository.
+#
 # @param repo_dir The directory where to install the repository file, ie
 #                 "/etc/yum.repos.d" for RedHat-based systems. If not present,
 #                 the module derives the path by itself.
