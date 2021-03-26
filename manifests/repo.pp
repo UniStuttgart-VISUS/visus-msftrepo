@@ -1,5 +1,8 @@
 # @summary (Un-) Installs a repository along with its GPG key.
 #
+# This is a utility type that is used by the msftrepo class. It is not intended
+# for direct use by end users.
+#
 # @param repo_src The URL of the repositoy definition, ie the file to be copied
 #                 to "/etc/yum.repos.d".
 # @param repo_dir The directory where to install the repository file, ie

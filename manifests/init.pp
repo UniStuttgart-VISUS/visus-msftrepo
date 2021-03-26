@@ -2,21 +2,19 @@
 #
 # At the moment, this module only installs the Microsoft production repository.
 
-# @param [Optional[String]] repo_dir The directory where to install the
-#                                    repository file, ie "/etc/yum.repos.d" for
-#                                    RedHat-based systems. If not present, the
-#                                    module derives the path by itself.
-# @param [Variant[String, Integer]] repo_owner The name or UID of the owning
-#                                              user of the repository file.
-# @param [Variant[String, Integer]] repo_group The name or UID of the owning
-#                                              group of the repository file.
-# @param [String] key_dir The directory where the key should be installed. This
-#                         is only used on RedHat-based systems and defaults to
-#                         "/etc/pki/rpm-gpg".
-# @param [String] key_prefix An additional prefix string that is added before
-#                            the name of the key file. This is only used on
-#                            RedHat-based systems and defaults to
-#                            "RPM-GPG-KEY-".
+# @param repo_dir The directory where to install the repository file, ie
+#                 "/etc/yum.repos.d" for RedHat-based systems. If not present,
+#                 the module derives the path by itself.
+# @param repo_owner The name or UID of the owning user of the repository file.
+#                   This parameter defaults to 0 (or "root").
+# @param repo_group The name or UID of the owning group of the repository file.
+#                   This parameter defaults to 0 (or "root").
+# @param key_dir The directory where the key should be installed. This is only
+#                used on RedHat-based systems and defaults to
+#                "/etc/pki/rpm-gpg".
+# @param key_prefix An additional prefix string that is added before the name of
+#                   the key file. This is only used on RedHat-based systems and
+#                   defaults to "RPM-GPG-KEY-".
 #
 # @example Include all known repositories with default configurations.
 #    include visusmsft

@@ -41,17 +41,16 @@ The following parameters are available in the `msftrepo` class:
 
 Data type: `Optional[String]`
 
-The directory where to install the
-repository file, ie "/etc/yum.repos.d" for
-RedHat-based systems. If not present, the
-module derives the path by itself.
+The directory where to install the repository file, ie
+"/etc/yum.repos.d" for RedHat-based systems. If not present,
+the module derives the path by itself.
 
 ##### <a name="repo_owner"></a>`repo_owner`
 
 Data type: `Variant[String, Integer]`
 
-The name or UID of the owning
-user of the repository file.
+The name or UID of the owning user of the repository file.
+This parameter defaults to 0 (or "root").
 
 Default value: `0`
 
@@ -59,8 +58,8 @@ Default value: `0`
 
 Data type: `Variant[String, Integer]`
 
-The name or UID of the owning
-group of the repository file.
+The name or UID of the owning group of the repository file.
+This parameter defaults to 0 (or "root").
 
 Default value: `0`
 
@@ -68,8 +67,8 @@ Default value: `0`
 
 Data type: `String`
 
-The directory where the key should be installed. This
-is only used on RedHat-based systems and defaults to
+The directory where the key should be installed. This is only
+used on RedHat-based systems and defaults to
 "/etc/pki/rpm-gpg".
 
 Default value: `'/etc/pki/rpm-gpg'`
@@ -78,10 +77,9 @@ Default value: `'/etc/pki/rpm-gpg'`
 
 Data type: `String`
 
-An additional prefix string that is added before
-the name of the key file. This is only used on
-RedHat-based systems and defaults to
-"RPM-GPG-KEY-".
+An additional prefix string that is added before the name of
+the key file. This is only used on RedHat-based systems and
+defaults to "RPM-GPG-KEY-".
 
 Default value: `'RPM-GPG-KEY-'`
 
@@ -97,7 +95,8 @@ Default value: `{}`
 
 ### <a name="msftreporepo"></a>`msftrepo::repo`
 
-(Un-) Installs a repository along with its GPG key.
+This is a utility type that is used by the msftrepo class. It is not intended
+for direct use by end users.
 
 #### Parameters
 
