@@ -1,52 +1,76 @@
 {
-    "name": "visus-msftrepo",
-    "version": "0.1.0",
-    "author": "Christoph Müller",
-    "summary": "Installs Microsoft repository sources for Powershell etc. via Puppet.",
-    "license": "MIT",
-    "source": "https://github.com/UniStuttgart-VISUS/visus-msftrepo",
-    "dependencies": [],
-    "operatingsystem_support": [
-      {
-        "operatingsystem": "CentOS",
+  "name": "visus-msftrepo",
+  "version": "0.1.0",
+  "author": "Christoph Müller",
+  "summary": "Installs Microsoft repository sources for Powershell etc. via Puppet.",
+  "license": "MIT",
+  "source": "https://github.com/UniStuttgart-VISUS/visus-msftrepo",
+  "issues_url": "https://github.com/UniStuttgart-VISUS/visus-msftrepo/issues",
+  "dependencies": [
+
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "CentOS",
       "operatingsystemrelease": [
-        "6", "7", "8"
+        "6",
+        "7",
+        "8"
       ]
     },
     {
       "operatingsystem": "OracleLinux",
       "operatingsystemrelease": [
-        "6", "7", "8"
+        "6",
+        "7",
+        "8"
       ]
     },
     {
       "operatingsystem": "RedHat",
       "operatingsystemrelease": [
-        "6", "7", "8"
+        "6",
+        "7",
+        "8"
       ]
     },
     {
       "operatingsystem": "Scientific",
       "operatingsystemrelease": [
-        "6", "7"
+        "6",
+        "7"
       ]
     },
     {
       "operatingsystem": "Debian",
       "operatingsystemrelease": [
-        "8", "9", "10"
+        "8",
+        "9",
+        "10"
       ]
     },
     {
       "operatingsystem": "Ubuntu",
       "operatingsystemrelease": [
-        "18.04", "18.10", "19.04", "19.10", "20.04", "20.10"
+        "18.04",
+        "18.10",
+        "19.04",
+        "19.10",
+        "20.04",
+        "20.10"
       ]
     },
     {
       "operatingsystem": "Fedora",
       "operatingsystemrelease": [
-        "26", "27", "28", "29", "30", "31", "32", "33"
+        "26",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33"
       ]
     }
   ],
