@@ -27,6 +27,15 @@ This module requires `puppet-yum` and `puppetlabs-apt` being installed.
 
 Just add `include msftrepo` to configure the repository. If desired, you can configure details of the installed repositories via Hiera.
 
+The following global Hiera settings affect all repositories:
+| Name                   | Description                                                              | Default          |
+| ---------------------- | ------------------------------------------------------------------------ | ---------------- |
+| `msftrepo::repo_dir`   | The path where the repository files are installed.                       |                  |
+| `msftrepo::repo_owner` | The user name or UID of the user owning the repository file.             | 0                |
+| `msftrepo::repo_group` | The name or UID of the group owning the repository file.                 | 0                |
+| `msftrepo::key_dir`    | The directory where the key should be installed on RedHat-based systems. | /etc/pki/rpm-gpg |
+| `msftrepo::key_prefix` | A prefix added to the name of the key files before the repository title. | RPM-GPG-KEY-     |
+
 ## Usage
 
 Include usage examples for common use cases in the **Usage** section. Show your
