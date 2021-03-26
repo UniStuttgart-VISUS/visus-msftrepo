@@ -23,7 +23,7 @@
 #              type "repo". This parameter is filled from Hiera.
 #
 # @example Include all known repositories with default configurations.
-#    include visusmsft
+#    include msftrepo
 #
 # @author Christoph Müller
 class msftrepo(
