@@ -36,6 +36,14 @@ The following global Hiera settings affect all repositories:
 | `msftrepo::key_dir`    | The directory where the key should be installed on RedHat-based systems. | /etc/pki/rpm-gpg |
 | `msftrepo::key_prefix` | A prefix added to the name of the key files before the repository title. | RPM-GPG-KEY-     |
 
+The repositories are stored in the hash `msftrepo::repos`. Each of the repositories has the following parameters:
+
+| Name       | Description                                                 | Default                                           |
+| ---------- | ----------------------------------------------------------- | ------------------------------------------------- |
+| `repo_src` | The URL where the repository definition is downloaded from. | OS-dependent                                      |
+| `key_id`   | The ID of the GPG key used with the repository.             | 0xEB3E94ADBE1229CF                                |
+| `key_src`  | The URL where the GPG key is downloaded from.             | https://packages.microsoft.com/keys/microsoft.asc   |
+
 ## Usage
 
 Include usage examples for common use cases in the **Usage** section. Show your
