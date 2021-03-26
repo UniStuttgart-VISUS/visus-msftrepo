@@ -7,7 +7,6 @@ installation of Powershell and .NET Core via a package manager.
 
 1. [Description](#description)
 1. [Setup - The basics of getting started with msftrepo](#setup)
-    * [What msftrepo affects](#what-msftrepo-affects)
     * [Setup requirements](#setup-requirements)
     * [Beginning with msftrepo](#beginning-with-msftrepo)
 1. [Usage - Configuration options and additional functionality](#usage)
