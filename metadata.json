@@ -1,6 +1,6 @@
 {
   "name": "visus-msftrepo",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "author": "Christoph Müller",
   "summary": "Installs Microsoft repository sources for Powershell etc. via Puppet.",
   "license": "MIT",

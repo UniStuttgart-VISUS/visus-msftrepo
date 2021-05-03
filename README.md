@@ -33,6 +33,7 @@ location.
 If desired, details of the installed repositories should be changed via Hiera.
 
 The following global Hiera settings affect all repositories:
+
 | Name                   | Description                                                              | Default          |
 | ---------------------- | ------------------------------------------------------------------------ | ---------------- |
 | `msftrepo::repo_dir`   | The path where the repository files are installed.                       | undef            |

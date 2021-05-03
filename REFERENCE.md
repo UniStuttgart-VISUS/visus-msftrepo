@@ -25,7 +25,7 @@ Microsoft production repository.
 ##### Include all known repositories with default configurations.
 
 ```puppet
-include visusmsft
+include msftrepo
 ```
 
 #### Parameters
