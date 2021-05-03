@@ -56,4 +56,4 @@ Only the distributions listed in `metadata.json` are supported.
 
 ## Development
 
-Open a pull request on [GitHub](https://github.com/UniStuttgart-VISUS/visus-msftrepo/edit/main/README.md).
+Open a pull request on [GitHub](https://github.com/UniStuttgart-VISUS/visus-msftrepo/).
