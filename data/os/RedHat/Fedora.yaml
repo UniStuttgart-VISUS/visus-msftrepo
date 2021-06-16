@@ -7,4 +7,4 @@ lookup_options:
 
 msftrepo::repos:
   microsoft-prod:
-    repo_src: 'https://packages.microsoft.com/config/%{::os.name}/%{::os.release.major}/prod.repo'
+    repo_src: 'https://packages.microsoft.com/config/fedora/%{::os.release.major}/prod.repo'
