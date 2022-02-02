@@ -41,14 +41,6 @@ define msftrepo::repo(
 
     case $facts['os']['family'] {
         'RedHat': {
-            # (Un-) Install the repository GPG key.
-            unless ($repo_src == undef) {
-                yum::gpgkey { "$key_dir/${key_prefix}${title}":
-                    ensure => $ensure,
-                    source => $key_src,
-                }
-            }
-
             # Resolve the target path for the repo definition.
             $dst = if $repo_dir {
                 $repo_dir
@@ -56,8 +48,14 @@ define msftrepo::repo(
                 '/etc/yum.repos.d'
             }
 
+            # (Un-) Install the repository GPG key.
+            yum::gpgkey { "$key_dir/${key_prefix}${title}":
+                ensure => $ensure,
+                source => $key_src,
+            }
+
             # (Un-) Install the repo definition.
-            file { "${dst}/${title}${repo_ext}":
+            -> file { "${dst}/${title}${repo_ext}":
                 ensure => $ensure,
                 source => $repo_src,
                 owner => $repo_owner,
@@ -66,13 +64,6 @@ define msftrepo::repo(
         }
 
         'Debian': {
-            # (Un-) Install the repository GPG key.
-            apt::key { $title:
-                ensure => $ensure,
-                id => $key_id,
-                source => $key_src
-            }
-
             # Resolve the target path for the repo definition.
             $dst = if $repo_dir {
                 $repo_dir
@@ -80,8 +71,15 @@ define msftrepo::repo(
                 "${apt::params::sources_list_d}"
             }
 
+            # (Un-) Install the repository GPG key.
+            apt::key { $title:
+                ensure => $ensure,
+                id => $key_id,
+                source => $key_src
+            }
+
             # (Un-) Install the repo definition.
-            file { "${dst}/${title}${repo_ext}":
+            -> file { "${dst}/${title}${repo_ext}":
                 ensure => $ensure,
                 source => $repo_src,
                 owner => $repo_owner,
