@@ -34,7 +34,7 @@ define msftrepo::repo(
 
     # Determine the extension of the repository file from the source's name.
     $repo_ext = if $repo_src =~ /(\.[^\.]+)$/ {
-        "$0"
+        $0
     } else {
         ''
     }
@@ -49,7 +49,7 @@ define msftrepo::repo(
             }
 
             # (Un-) Install the repository GPG key.
-            yum::gpgkey { "$key_dir/${key_prefix}${title}":
+            yum::gpgkey { "${key_dir}/${key_prefix}${title}":
                 ensure => $ensure,
                 source => $key_src,
             }
@@ -85,13 +85,13 @@ define msftrepo::repo(
                 owner => $repo_owner,
                 group => $repo_group
             }
-            -> exec { 'refresh-after-${title}':
+            -> exec { "refresh-after-${title}":
                 command => "${apt::params::provider} update"
             }
         }
 
         default: {
-            fail(translate('The current distribution is not supported by ${title}.'))
+            fail(translate("The current distribution is not supported by ${title}."))
         }
     }
 }
