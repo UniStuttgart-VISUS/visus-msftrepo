@@ -43,9 +43,9 @@ class msftrepo(
     } else {
         case $facts['os']['family'] {
             'RedHat': { '/etc/yum.repos.d' }
-            'Debian': { "${apt::params::sources_list_d}" }
+            'Debian': { $apt::params::sources_list_d }
             default: {
-                fail(translate('The current distribution is not supported by ${title}.'))
+                fail(translate("The current distribution is not supported by ${title}."))
             }
         }
     }

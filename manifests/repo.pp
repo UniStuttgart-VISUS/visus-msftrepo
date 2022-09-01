@@ -68,7 +68,7 @@ define msftrepo::repo(
             $dst = if $repo_dir {
                 $repo_dir
             } else {
-                "${apt::params::sources_list_d}"
+                $apt::params::sources_list_d
             }
 
             # (Un-) Install the repository GPG key.
